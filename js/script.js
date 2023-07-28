@@ -1,20 +1,15 @@
-// Handle load event of window object
 
 
+function logSubmit(event) {
+  console.log(`Form Submitted! Timestamp: ${event.timeStamp}`);
+  event.preventDefault();
+  console.log(document.getElementById('id').value);
+  console.log(document.getElementById('name').value);
+  console.log(document.getElementById('ext').value);
+  console.log(document.getElementById('email').value);
+  console.log(document.getElementById('department').value);
+}
 
+const empForm = document.getElementById("empform");
+document.addEventListener("submit", logSubmit);
 
-var idInput = document.getElementById("id");
-var nameInput = document.getElementById("name");
-var extInput = document.getElementById("ext");
-var emailInput = document.getElementById("email");
-var departmentInput = document.getElementById("department");
-
-document.getElementById('empForm').addEventListener("submit", function (e) {
-    e.preventDefault();
-      // handles sumbit
-    console.log(idInput.value);
-    console.log(nameInput.value);
-    console.log(extInput.value);
-    console.log(emailInput.value);
-    console.log(departmentInput.value);
-});

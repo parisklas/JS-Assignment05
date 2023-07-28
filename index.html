@@ -10,31 +10,49 @@
     <style>
         h1 {margin-bottom: 30px;}
         label {font-weight: bold;}
-        input, select {margin-bottom: 10px;}
-        form {width: 30%; padding: 20px;}
+        input, select {margin-bottom: 10px; background-color: gray;}
+        form {
+            width: 50%;
+            padding: 20px;
+            border: solid;
+            border-color: orange;
+            border-width: 2px;
+            background-color: lightgray;
+        }
+
     </style>
 </head>
 <body class="mt-2 ml-4">
     <h1>Employee Management System</h1>
     <form id="empForm">
-        <label for="id">8-Digit Employee ID</label><br>
-        <input type="text" id="id" name="id" maxlength="8" required><br>
-        <label for="name">Full Name</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="ext">4-Digit Extension</label><br>
-        <input type="text" id="ext" name="ext" maxlength="4" required><br>
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="department">Department</label><br>
-        <select name="department" id="department" form="empForm">
-            <option value="administrative">Administrative</option>
-            <option value="engineering">Engineering</option>
-            <option value="executive">Executive</option>
-            <option value="marketing">Marketing</option>
-            <option value="qualityAssurance">Quality Assurance</option>
-            <option value="sales">Sales</option>
-        </select>
-        <input type="submit" value="Add Employee">
+        <div class="form-group">
+            <label for="id">8-Digit Employee ID</label>
+            <input type="text" id="id" name="id" maxlength="8" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="ext">4-Digit Extension</label>
+            <input type="text" id="ext" name="ext" maxlength="4" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select name="department" id="department" form="empForm" class="form-control">
+                <option value="administrative">Administrative</option>
+                <option value="engineering">Engineering</option>
+                <option value="executive">Executive</option>
+                <option value="marketing">Marketing</option>
+                <option value="qualityAssurance">Quality Assurance</option>
+                <option value="sales">Sales</option>
+            </select>
+        </div>
+        <button type="submit">Add Employee</button>
     </form>
 </body>
 </html>
